@@ -9,6 +9,7 @@
 #import "AbstractActionSheetPicker.h"
 
 @class ActionSheetTimeRangePicker;
+
 typedef void(^ActionTimeRangeDoneBlock)(ActionSheetTimeRangePicker *picker, NSInteger leftValue, NSInteger rightValue);
 typedef void(^ActionTimeRangeCancelBlock)(ActionSheetTimeRangePicker *picker);
 
