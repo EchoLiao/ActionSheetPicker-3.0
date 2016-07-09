@@ -102,4 +102,12 @@
     return (pickerView.frame.size.width - 40) / kComponentCount;
 }
 
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    if ([UIPickerView appearance].tintColor) {
+        NSString *title = [self pickerView:pickerView titleForRow:row forComponent:component];
+        return [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName: [UIPickerView appearance].tintColor}];
+    }
+    return nil;
+}
+
 @end
