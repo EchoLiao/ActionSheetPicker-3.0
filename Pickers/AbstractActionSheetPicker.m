@@ -608,6 +608,9 @@ CG_INLINE BOOL isIPhone4()
 
     _popOverController = [[UIPopoverController alloc] initWithContentViewController:viewController];
     _popOverController.delegate = self;
+    if ([[UIToolbar appearance] barTintColor]) {
+        _popOverController.backgroundColor = [[UIToolbar appearance] barTintColor];
+    }
     if (self.popoverBackgroundViewClass) {
             [self.popOverController setPopoverBackgroundViewClass:self.popoverBackgroundViewClass];
     }
