@@ -191,7 +191,7 @@
     }
     else
     {
-        assert(NO);
+        NSAssert(NO, @"");
     }
 
 }
@@ -305,7 +305,7 @@
                 frame = CGRectMake(0.0, 0.0, secondColumnWidth, 32);
                 break;
             default:
-                assert(NO);
+                NSAssert(NO, @"");
                 break;
         }
 
